@@ -1,0 +1,32 @@
+# Python environments and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Local databases and SQLite files
+*.db
+*.sqlite
+*.sqlite3
+*.db-journal
+*.db-wal
+*.db-shm
+
+# Data files: keep source and row-level exports out of Git by default
+# See data/README.md for the reproducible data workflow.
+data/raw/*
+data/processed/*
+data/exports/*.csv
+data/exports/*.parquet
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!data/exports/README.md
+!data/exports/.gitkeep
+
+# Temporary outputs and archives
+fulfillment_pulse_outputs/
+*_outputs.zip
+*.log
+.DS_Store
+Thumbs.db
