@@ -22,6 +22,7 @@ FULFILLMENT-PULSE/
 │   ├── project_structure.md
 │   └── reproducibility.md
 ├── models/
+│   ├── .gitkeep
 │   ├── README.md
 │   └── fulfillment_pulse_eta_model.joblib
 ├── notebooks/

@@ -112,40 +112,46 @@ The dashboard previews are embedded below:
 
 ```text
 FULFILLMENT-PULSE/
-├── README.md
 ├── .gitignore
+├── README.md
 ├── requirements.txt
+├── data/
+│   ├── README.md
+│   ├── raw/.gitkeep
+│   ├── processed/.gitkeep
+│   └── exports/
+│       ├── README.md
+│       └── .gitkeep                 # generated CSVs are local and Git-ignored
+├── dashboard/
+│   ├── README.md
+│   ├── PowerBI/
+│   │   └── PowerBI.pbix
+│   └── screenshots/
+│       ├── executive_overview.png
+│       └── predictive_performance.png
+├── docs/
+│   ├── README.md
+│   ├── data_dictionary.md
+│   ├── data_sources.md
+│   ├── methodology.md
+│   ├── project_structure.md
+│   └── reproducibility.md
+├── models/
+│   ├── .gitkeep
+│   ├── README.md
+│   └── fulfillment_pulse_eta_model.joblib
 ├── notebooks/
 │   ├── 01_data_ingestion_quality_audit.ipynb
 │   └── 02_delivery_time_prediction.ipynb
-├── data/
-│   ├── raw/                 # Source data location; do not commit restricted/raw data
-│   ├── processed/           # Optional local intermediate outputs
-│   └── exports/
-│       ├── README.md
-│       └── .gitkeep                 # CSV outputs are generated locally and ignored by Git
-├── scripts/
-│   └── load_predictions.py
-├── sql/
-│   ├── business_analysis.sql
-│   ├── schema.sql
-│   └── README.md
-├── models/
-│   └── fulfillment_pulse_eta_model.joblib
-├── dashboard/
-│   ├── PowerBI/
-│   │   └── PowerBI.pbix
-│   ├── README.md
-│   └── screenshots/
 ├── reports/
 │   ├── business_insights.md
 │   └── model_evaluation.md
-└── docs/
-    ├── data_dictionary.md
-    ├── data_sources.md
-    ├── methodology.md
-    ├── project_structure.md
-    └── reproducibility.md
+├── scripts/
+│   └── load_predictions.py
+└── sql/
+    ├── README.md
+    ├── business_analysis.sql
+    └── schema.sql
 ```
 
 The PBIX report, trained model binary, and dashboard screenshots are included in the repository. The source dataset, local SQLite database, and row-level prediction CSV exports are excluded by `.gitignore`; regenerate them locally by following the reproducibility instructions.
@@ -183,7 +189,7 @@ The loader creates `fulfillment_pulse.db` in the repository root and imports the
 
 ### 3. Open the Power BI report
 
-Open `dashboard/Fulfillment_Pulse.pbix` in Power BI Desktop. If the report is not yet in that folder, copy your final local PBIX file there first and refresh its data sources as needed.
+Open `dashboard/PowerBI/PowerBI.pbix` in Power BI Desktop and refresh its data sources if needed.
 
 ### 4. Python dependencies
 
@@ -235,7 +241,6 @@ The notebooks may also install their own dependencies when run in Colab.
 - [x] Business insights report consolidated
 - [x] Final PBIX and dashboard screenshots included in the repository
 - [x] Initial GitHub publication completed
-- [ ] Add LinkedIn/profile links if desired
 
 ## Author
 
