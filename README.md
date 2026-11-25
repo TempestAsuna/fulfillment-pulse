@@ -1,7 +1,9 @@
 # FULFILLMENT PULSE
 
 **Food-delivery ETA prediction, operational analytics, and model monitoring**
+
 **Author:** Trishit Dev Mukherjee
+
 **Tools:** Python · Pandas · NumPy · scikit-learn · SQLite · SQL · Power BI
 
 FULFILLMENT PULSE is an end-to-end data analytics and applied machine-learning project. It examines a public food-delivery dataset, engineers operational features, compares regression models for delivery-time estimation, analyses held-out predictions with SQL, and communicates operational and model-performance patterns through a two-page Power BI report.
@@ -95,17 +97,16 @@ The report contains two pages:
 1. **Executive Overview:** order volume and delivery KPIs, average delivery time by traffic category, and average delivery time by weather category.
 2. **Predictive Performance:** actual-versus-predicted delivery time, absolute-error distribution, validation model comparison, feature importance, and final test metrics.
 
-Place the final Power BI file at `dashboard/Fulfillment_Pulse.pbix`. For the README image previews, save the two page screenshots using the filenames below:
+The published Power BI file is `dashboard/PowerBI/PowerBI.pbix`. The two page previews are stored at the following paths:
 
 - `dashboard/screenshots/executive_overview.png`
 - `dashboard/screenshots/predictive_performance.png`
 
-Then uncomment or add the following Markdown image embeds:
+The dashboard previews are embedded below:
 
-```markdown
 ![Executive Overview](dashboard/screenshots/executive_overview.png)
+
 ![Predictive Performance](dashboard/screenshots/predictive_performance.png)
-```
 
 ## Repository structure
 
@@ -121,9 +122,8 @@ FULFILLMENT-PULSE/
 │   ├── raw/                 # Source data location; do not commit restricted/raw data
 │   ├── processed/           # Optional local intermediate outputs
 │   └── exports/
-│       ├── fulfillment_pulse_test_predictions.csv
-│       ├── fulfillment_pulse_validation_comparison.csv
-│       └── fulfillment_pulse_permutation_importance.csv
+│       ├── README.md
+│       └── .gitkeep                 # CSV outputs are generated locally and ignored by Git
 ├── scripts/
 │   └── load_predictions.py
 ├── sql/
@@ -133,7 +133,9 @@ FULFILLMENT-PULSE/
 ├── models/
 │   └── fulfillment_pulse_eta_model.joblib
 ├── dashboard/
-│   ├── Fulfillment_Pulse.pbix
+│   ├── PowerBI/
+│   │   └── PowerBI.pbix
+│   ├── README.md
 │   └── screenshots/
 ├── reports/
 │   ├── business_insights.md
@@ -146,7 +148,7 @@ FULFILLMENT-PULSE/
     └── reproducibility.md
 ```
 
-Some generated artifacts, such as the PBIX report, model binary, and screenshots, should be copied into the corresponding folders before the repository is made public. Do not leave empty placeholder files in place of the actual artifacts.
+The PBIX report, trained model binary, and dashboard screenshots are included in the repository. The source dataset, local SQLite database, and row-level prediction CSV exports are excluded by `.gitignore`; regenerate them locally by following the reproducibility instructions.
 
 ## Technology stack
 
@@ -231,12 +233,12 @@ The notebooks may also install their own dependencies when run in Colab.
 - [x] Two-page Power BI report designed
 - [x] SQL analysis developed and findings documented
 - [x] Business insights report consolidated
-- [ ] Final PBIX and dashboard screenshots copied into the repository
-- [ ] Final repository review, GitHub links and publication
+- [x] Final PBIX and dashboard screenshots included in the repository
+- [x] Initial GitHub publication completed
+- [ ] Add LinkedIn/profile links if desired
 
 ## Author
 
-**Trishit Dev Mukherjee**
-B.Sc. Computer Science, KIIT University
-
-Add your GitHub profile, LinkedIn profile and professional contact details here before publication.
+**Trishit Dev Mukherjee**  
+B.Sc. Computer Science, KIIT University  
+GitHub: [@TempestAsuna](https://github.com/TempestAsuna)

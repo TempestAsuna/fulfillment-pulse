@@ -1,10 +1,17 @@
 # Power BI dashboard
 
-Copy the final Power BI Desktop report to this directory as `Fulfillment_Pulse.pbix`.
+The Power BI Desktop report is included at:
 
-The report contains:
+- `PowerBI/PowerBI.pbix`
 
-1. **Executive Overview:** held-out test order count, actual/median delivery duration, model error KPIs, average Haversine distance and delivery-time summaries by traffic and weather.
-2. **Predictive Performance:** actual vs predicted scatter plot, absolute-error distribution, permutation feature importance, validation model comparison and final test-set model metrics.
+The report contains two pages:
 
-Screenshots under `screenshots/` are static previews of the current report. The PBIX file itself is not bundled in this scaffold and must be copied from the user's local Power BI workspace.
+1. **Executive Overview:** held-out test order count, delivery KPIs, average delivery duration by traffic category, and average delivery duration by weather category.
+2. **Predictive Performance:** actual-versus-predicted delivery time, absolute-error distribution, validation model comparison, permutation feature importance, and final held-out test metrics.
+
+Static previews are included in `screenshots/`:
+
+- `screenshots/executive_overview.png`
+- `screenshots/predictive_performance.png`
+
+Open the PBIX in Power BI Desktop to inspect the report and refresh the source data if required. The screenshots are static previews and do not replace the PBIX file.
